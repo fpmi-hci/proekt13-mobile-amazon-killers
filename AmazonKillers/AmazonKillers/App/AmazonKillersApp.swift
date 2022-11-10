@@ -11,7 +11,7 @@ import SwiftUI
 struct AmazonKillersApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView()
         }
     }
 }

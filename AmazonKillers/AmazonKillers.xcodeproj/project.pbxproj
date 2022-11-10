@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45266A17291007DF0090A6F4 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45266A16291007DF0090A6F4 /* AppViewModel.swift */; };
+		45266A1D291008840090A6F4 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45266A1C291008840090A6F4 /* UserDefaultManager.swift */; };
+		45266A2129100B0B0090A6F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45266A2029100B0B0090A6F4 /* OnboardingView.swift */; };
 		45E5A3A0291004810015EC35 /* AmazonKillersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5A39F291004810015EC35 /* AmazonKillersApp.swift */; };
-		45E5A3A2291004810015EC35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5A3A1291004810015EC35 /* ContentView.swift */; };
+		45E5A3A2291004810015EC35 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5A3A1291004810015EC35 /* AppView.swift */; };
 		45E5A3A4291004820015EC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E5A3A3291004820015EC35 /* Assets.xcassets */; };
 		45E5A3A7291004820015EC35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E5A3A6291004820015EC35 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45266A16291007DF0090A6F4 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		45266A1C291008840090A6F4 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		45266A2029100B0B0090A6F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		45E5A39C291004810015EC35 /* AmazonKillers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmazonKillers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E5A39F291004810015EC35 /* AmazonKillersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazonKillersApp.swift; sourceTree = "<group>"; };
-		45E5A3A1291004810015EC35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		45E5A3A1291004810015EC35 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		45E5A3A3291004820015EC35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45E5A3A6291004820015EC35 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +38,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45266A182910083E0090A6F4 /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				45266A192910084D0090A6F4 /* Services */,
+			);
+			path = AppKit;
+			sourceTree = "<group>";
+		};
+		45266A192910084D0090A6F4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				45266A1A291008670090A6F4 /* Managers */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		45266A1A291008670090A6F4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				45266A1B291008700090A6F4 /* UserDefaultManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		45266A1B291008700090A6F4 /* UserDefaultManager */ = {
+			isa = PBXGroup;
+			children = (
+				45266A1C291008840090A6F4 /* UserDefaultManager.swift */,
+			);
+			path = UserDefaultManager;
+			sourceTree = "<group>";
+		};
+		45266A1E29100A630090A6F4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				45266A2029100B0B0090A6F4 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		45266A1F29100A6A0090A6F4 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
 		45E5A393291004810015EC35 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +104,11 @@
 		45E5A39E291004810015EC35 /* AmazonKillers */ = {
 			isa = PBXGroup;
 			children = (
-				45E5A39F291004810015EC35 /* AmazonKillersApp.swift */,
-				45E5A3A1291004810015EC35 /* ContentView.swift */,
-				45E5A3A3291004820015EC35 /* Assets.xcassets */,
+				45266A1F29100A6A0090A6F4 /* Discover */,
+				45266A1E29100A630090A6F4 /* Onboarding */,
+				45266A182910083E0090A6F4 /* AppKit */,
+				45E5A3AD2910055E0015EC35 /* App */,
+				45E5A3AE291005640015EC35 /* Resources */,
 				45E5A3A5291004820015EC35 /* Preview Content */,
 			);
 			path = AmazonKillers;
@@ -65,6 +120,24 @@
 				45E5A3A6291004820015EC35 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		45E5A3AD2910055E0015EC35 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				45E5A39F291004810015EC35 /* AmazonKillersApp.swift */,
+				45E5A3A1291004810015EC35 /* AppView.swift */,
+				45266A16291007DF0090A6F4 /* AppViewModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		45E5A3AE291005640015EC35 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45E5A3A3291004820015EC35 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45E5A3A2291004810015EC35 /* ContentView.swift in Sources */,
+				45E5A3A2291004810015EC35 /* AppView.swift in Sources */,
 				45E5A3A0291004810015EC35 /* AmazonKillersApp.swift in Sources */,
+				45266A1D291008840090A6F4 /* UserDefaultManager.swift in Sources */,
+				45266A2129100B0B0090A6F4 /* OnboardingView.swift in Sources */,
+				45266A17291007DF0090A6F4 /* AppViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
