@@ -17,17 +17,18 @@ struct AppView: View {
     var body: some View {
         ZStack(alignment: .top) {
             VStack {
-                if appViewModel.isLoggedIn {
+//                if appViewModel.isLoggedIn {
                     mainContent
-                } else {
-                    if !appViewModel.passOnboarding {
-                        OnboardingView(passedOnboarding: $appViewModel.passOnboarding)
-                    } else {
-                        NavigationView {
-                            SignInView()
-                        }
-                    }
-                }
+//                } else {
+//                    if !appViewModel.passOnboarding {
+//                        OnboardingView(passedOnboarding: $appViewModel.passOnboarding)
+//                    } else {
+//                        NavigationView {
+////                            SignInView()
+//                            EmptyView()
+//                        }
+//                    }
+//                }
             }
         }.navigationBarHidden(true)
             .transition(.opacity)
@@ -36,7 +37,7 @@ struct AppView: View {
     var mainContent: some View {
         VStack(spacing: 0) {
             appViews
-                .environmentObject(appViewModel)
+//                .environmentObject(appViewModel)
             
             TabBar(selected: $selectedPage)
         }
@@ -46,8 +47,10 @@ struct AppView: View {
     var appViews: some View {
         switch selectedPage {
         case 0:
-            EmptyView()
-            //            DiscoverView()
+//            NavigationView {
+                DiscoverView()
+//                    .navigationBarHidden(true)
+//            }
         default:
             EmptyView()
         }

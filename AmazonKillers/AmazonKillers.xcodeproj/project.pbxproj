@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451DDB91291D288F0069F7F3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451DDB90291D288E0069F7F3 /* TabBar.swift */; };
+		451DDB94291D28C30069F7F3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451DDB93291D28C30069F7F3 /* Color+Extension.swift */; };
 		45266A17291007DF0090A6F4 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45266A16291007DF0090A6F4 /* AppViewModel.swift */; };
 		45266A1D291008840090A6F4 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45266A1C291008840090A6F4 /* UserDefaultManager.swift */; };
 		45266A2129100B0B0090A6F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45266A2029100B0B0090A6F4 /* OnboardingView.swift */; };
+		4537099E291EC7E6006EC14E /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537099D291EC7E6006EC14E /* MockData.swift */; };
+		453709A1291ECFE8006EC14E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 453709A0291ECFE8006EC14E /* Kingfisher */; };
+		45B8A358291E6E78000B49B1 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A357291E6E78000B49B1 /* DiscoverView.swift */; };
 		45E5A3A0291004810015EC35 /* AmazonKillersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5A39F291004810015EC35 /* AmazonKillersApp.swift */; };
 		45E5A3A2291004810015EC35 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5A3A1291004810015EC35 /* AppView.swift */; };
 		45E5A3A4291004820015EC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E5A3A3291004820015EC35 /* Assets.xcassets */; };
@@ -17,9 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		451DDB90291D288E0069F7F3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		451DDB93291D28C30069F7F3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		45266A16291007DF0090A6F4 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		45266A1C291008840090A6F4 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		45266A2029100B0B0090A6F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		4537099D291EC7E6006EC14E /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		45B8A357291E6E78000B49B1 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		45E5A39C291004810015EC35 /* AmazonKillers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmazonKillers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E5A39F291004810015EC35 /* AmazonKillersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazonKillersApp.swift; sourceTree = "<group>"; };
 		45E5A3A1291004810015EC35 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -32,15 +41,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453709A1291ECFE8006EC14E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		451DDB8E291D286F0069F7F3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				451DDB8F291D287F0069F7F3 /* TabBar */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		451DDB8F291D287F0069F7F3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				451DDB90291D288E0069F7F3 /* TabBar.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		451DDB92291D28A90069F7F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				451DDB93291D28C30069F7F3 /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		45266A182910083E0090A6F4 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				451DDB92291D28A90069F7F3 /* Extensions */,
+				451DDB8E291D286F0069F7F3 /* UI */,
 				45266A192910084D0090A6F4 /* Services */,
 			);
 			path = AppKit;
@@ -81,6 +117,7 @@
 		45266A1F29100A6A0090A6F4 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				45B8A357291E6E78000B49B1 /* DiscoverView.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -136,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				45E5A3A3291004820015EC35 /* Assets.xcassets */,
+				4537099D291EC7E6006EC14E /* MockData.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -156,6 +194,9 @@
 			dependencies = (
 			);
 			name = AmazonKillers;
+			packageProductDependencies = (
+				453709A0291ECFE8006EC14E /* Kingfisher */,
+			);
 			productName = AmazonKillers;
 			productReference = 45E5A39C291004810015EC35 /* AmazonKillers.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +225,9 @@
 				Base,
 			);
 			mainGroup = 45E5A393291004810015EC35;
+			packageReferences = (
+				4537099F291ECFE8006EC14E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 45E5A39D291004810015EC35 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -211,10 +255,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				45E5A3A2291004810015EC35 /* AppView.swift in Sources */,
+				451DDB94291D28C30069F7F3 /* Color+Extension.swift in Sources */,
 				45E5A3A0291004810015EC35 /* AmazonKillersApp.swift in Sources */,
 				45266A1D291008840090A6F4 /* UserDefaultManager.swift in Sources */,
+				4537099E291EC7E6006EC14E /* MockData.swift in Sources */,
+				451DDB91291D288F0069F7F3 /* TabBar.swift in Sources */,
 				45266A2129100B0B0090A6F4 /* OnboardingView.swift in Sources */,
 				45266A17291007DF0090A6F4 /* AppViewModel.swift in Sources */,
+				45B8A358291E6E78000B49B1 /* DiscoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +463,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4537099F291ECFE8006EC14E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		453709A0291ECFE8006EC14E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4537099F291ECFE8006EC14E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45E5A394291004810015EC35 /* Project object */;
 }
