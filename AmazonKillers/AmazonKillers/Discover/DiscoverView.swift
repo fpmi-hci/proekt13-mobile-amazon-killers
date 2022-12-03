@@ -10,6 +10,7 @@ import Kingfisher
 
 struct DiscoverView: View {
     @State private var selectedIndex: Int = 0
+    @State var showDetails: Bool = false
     
     var body: some View {
         ZStack {
@@ -53,7 +54,7 @@ struct DiscoverView: View {
                                 ForEach(data.indices, id: \.self) { indx in
                                     let category = data[indx]
                                     Button(action: {
-//                                        selectedIndex = indx
+                                        //                                        selectedIndex = indx
                                         value.scrollTo(indx)
                                     }) {
                                         VStack {
@@ -77,7 +78,7 @@ struct DiscoverView: View {
                                     Text(category)
                                         .foregroundColor(.textColor)
                                         .font(.system(size: 26, weight: .bold))
-                                        
+                                    
                                     Spacer()
                                 }
                                 ScrollView(.horizontal, showsIndicators: false) {
@@ -86,7 +87,7 @@ struct DiscoverView: View {
                                             let book = bookData[indx]
                                             Button(action: {
                                                 selectedIndex = indx
-                                                //                                    showDetails.toggle()
+                                                showDetails.toggle()
                                             }) {
                                                 VStack {
                                                     KFImage(URL(string: book.cover))
@@ -108,31 +109,31 @@ struct DiscoverView: View {
                                                 }.frame(width: 160)
                                             }
                                         }
-                                        //                            .fullScreenCover(isPresented: $showDetails) {
-                                        //                                AlbumDetailsView(albums: $albums, selectedIndex: $selectedIndex)
-                                    }
-                                }.id(i)
-                            }
+                                        .fullScreenCover(isPresented: $showDetails) {
+                                            DetailsView(selectedIndex: $selectedIndex)
+                                        }
+                                    }.id(i)
+                                }
+                                
+                                
+                            }.padding()
                             
-                            
-                        }.padding()
+                            //                }
+                        }
                         
-                        //                }
                     }
-                    
                 }
+                //            Spacer()
             }
-            //            Spacer()
+            
+            
         }
-        
-        
+    }
     }
     
-}
-
-
-struct DiscoverView_Previews: PreviewProvider {
-    static var previews: some View {
-        DiscoverView()
-    }
-}
+    //
+    //struct DiscoverView_Previews: PreviewProvider {
+    //    static var previews: some View {
+    //        DiscoverView()
+    //    }
+    //}

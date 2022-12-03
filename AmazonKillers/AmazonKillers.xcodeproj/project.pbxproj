@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4505557F2935FC9F008F5E09 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505557E2935FC9F008F5E09 /* DetailsView.swift */; };
+		450555822936149B008F5E09 /* FiveStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450555812936149B008F5E09 /* FiveStarView.swift */; };
+		4505558529362E77008F5E09 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505558429362E77008F5E09 /* CartView.swift */; };
 		451DDB91291D288F0069F7F3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451DDB90291D288E0069F7F3 /* TabBar.swift */; };
 		451DDB94291D28C30069F7F3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451DDB93291D28C30069F7F3 /* Color+Extension.swift */; };
 		45266A17291007DF0090A6F4 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45266A16291007DF0090A6F4 /* AppViewModel.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4505557E2935FC9F008F5E09 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		450555812936149B008F5E09 /* FiveStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarView.swift; sourceTree = "<group>"; };
+		4505558429362E77008F5E09 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		451DDB90291D288E0069F7F3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		451DDB93291D28C30069F7F3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		45266A16291007DF0090A6F4 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
@@ -48,9 +54,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4505558029361486008F5E09 /* FiveStars */ = {
+			isa = PBXGroup;
+			children = (
+				450555812936149B008F5E09 /* FiveStarView.swift */,
+			);
+			name = FiveStars;
+			sourceTree = "<group>";
+		};
+		4505558329362E61008F5E09 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				4505558429362E77008F5E09 /* CartView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		451DDB8E291D286F0069F7F3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4505558029361486008F5E09 /* FiveStars */,
 				451DDB8F291D287F0069F7F3 /* TabBar */,
 			);
 			name = UI;
@@ -118,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				45B8A357291E6E78000B49B1 /* DiscoverView.swift */,
+				4505557E2935FC9F008F5E09 /* DetailsView.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -141,6 +165,7 @@
 		45E5A39E291004810015EC35 /* AmazonKillers */ = {
 			isa = PBXGroup;
 			children = (
+				4505558329362E61008F5E09 /* Cart */,
 				45266A1F29100A6A0090A6F4 /* Discover */,
 				45266A1E29100A630090A6F4 /* Onboarding */,
 				45266A182910083E0090A6F4 /* AppKit */,
@@ -255,13 +280,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				45E5A3A2291004810015EC35 /* AppView.swift in Sources */,
+				4505557F2935FC9F008F5E09 /* DetailsView.swift in Sources */,
 				451DDB94291D28C30069F7F3 /* Color+Extension.swift in Sources */,
 				45E5A3A0291004810015EC35 /* AmazonKillersApp.swift in Sources */,
 				45266A1D291008840090A6F4 /* UserDefaultManager.swift in Sources */,
 				4537099E291EC7E6006EC14E /* MockData.swift in Sources */,
+				4505558529362E77008F5E09 /* CartView.swift in Sources */,
 				451DDB91291D288F0069F7F3 /* TabBar.swift in Sources */,
 				45266A2129100B0B0090A6F4 /* OnboardingView.swift in Sources */,
 				45266A17291007DF0090A6F4 /* AppViewModel.swift in Sources */,
+				450555822936149B008F5E09 /* FiveStarView.swift in Sources */,
 				45B8A358291E6E78000B49B1 /* DiscoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

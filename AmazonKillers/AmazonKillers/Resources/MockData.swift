@@ -19,7 +19,7 @@ struct Book: Identifiable, Hashable {
     var name: String
     var author: String
     var overview: String
-    var rating: Double
+    var rating: Decimal
     var cover: String
 }
 
@@ -27,7 +27,7 @@ let bookData = [
     Book(name: "Catcher in the Rye",
          author: "J.D. Salinger",
          overview: "The Catcher in the Rye is a novel by J. D. Salinger, partially published in serial form in 1945–1946 and as a novel in 1951. It was originally intended for adu lts but is often read by adolescents for its theme of angst, alienation and as a critique",
-         rating: 4.0,
+         rating: 1.0,
          cover: "https://cdn.britannica.com/94/181394-050-2F76F7EE/Reproduction-cover-edition-The-Catcher-in-the.jpg"),
     Book(name: "Someone Like You",
          author: "Roald Dahl",
