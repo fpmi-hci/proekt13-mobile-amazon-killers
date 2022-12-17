@@ -11,6 +11,7 @@ import Kingfisher
 struct DiscoverView: View {
     @State private var selectedIndex: Int = 0
     @State var showDetails: Bool = false
+    @State var showSearch: Bool = false
     
     var body: some View {
         ZStack {
@@ -20,7 +21,7 @@ struct DiscoverView: View {
                     VStack {
                         HStack {
                             VStack(alignment: .leading, spacing: 0) {
-                                Text("Welcome back, Bunny!")
+                                Text("Welcome back, Adam!")
                                     .font(.system(size: 20))
                                     .foregroundColor(.lightGray)
                                 Text("What do you want to read today?")
@@ -31,7 +32,9 @@ struct DiscoverView: View {
                         }.padding()
                         
                         ZStack {
-                            Button(action: { }, label: {
+                            Button(action: {
+                                showSearch.toggle()
+                            }, label: {
                                 HStack {
                                     Image("search-icon")
                                     
@@ -47,6 +50,8 @@ struct DiscoverView: View {
                                 .cornerRadius(10)
                                 .foregroundColor(Color.lightGray)
                             })
+                        }.fullScreenCover(isPresented: $showSearch) {
+                            SearchView()
                         }
                         
                         ScrollView(.horizontal, showsIndicators: false) {

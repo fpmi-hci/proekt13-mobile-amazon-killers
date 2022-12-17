@@ -12,6 +12,7 @@ struct DetailsView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Binding var selectedIndex: Int
+    @State private var showingAlert = false
     
     var body: some View {
             VStack {
@@ -84,8 +85,10 @@ struct DetailsView: View {
                             .foregroundColor(Color.white)
                     })
                     
-                    Button(action: { }, label: {
-                        Text("By for 14.05")
+                    Button(action: {
+                        showingAlert = true
+                    }, label: {
+                        Text("Add to cart")
                             .font(.title2)
                             .bold()
                             .frame(width: 153, height: 55, alignment: .center)
@@ -93,7 +96,9 @@ struct DetailsView: View {
                             .background(Color.black)
                             .cornerRadius(10)
                             .foregroundColor(Color.white)
-                    })
+                    }).alert("Successfully added to cart", isPresented: $showingAlert) {
+                        Button("OK", role: .cancel) { }
+                    }
                 }
                 
             }

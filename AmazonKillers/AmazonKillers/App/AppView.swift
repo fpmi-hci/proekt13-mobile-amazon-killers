@@ -13,22 +13,23 @@ struct AppView: View {
     @State var signedIn = true
     
     @State var selectedPage: Int = 0
+
     
     var body: some View {
         ZStack(alignment: .top) {
             VStack {
-//                if appViewModel.isLoggedIn {
+                if appViewModel.isLoggedIn {
                     mainContent
-//                } else {
+                } else {
 //                    if !appViewModel.passOnboarding {
 //                        OnboardingView(passedOnboarding: $appViewModel.passOnboarding)
 //                    } else {
-//                        NavigationView {
-////                            SignInView()
+                        NavigationView {
+                            SignInView()
 //                            EmptyView()
-//                        }
+                        }
 //                    }
-//                }
+                }
             }
         }.navigationBarHidden(true)
             .transition(.opacity)
@@ -51,6 +52,8 @@ struct AppView: View {
                 DiscoverView()
 //                    .navigationBarHidden(true)
 //            }
+        case 1:
+            CartView()
         default:
             EmptyView()
         }
